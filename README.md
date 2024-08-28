@@ -23,7 +23,7 @@ STEP-5: Display the cipher text obtained above.
 char* encrypt(char text[], int s) {
     static char result[100];
     int i;
-    
+
  for (i = 0; i < strlen(text); i++) {
         char char_ = text[i];
         
