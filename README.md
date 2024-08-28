@@ -24,10 +24,10 @@ char* encrypt(char text[], int s) {
     static char result[100];
     int i;
     
-    for (i = 0; i < strlen(text); i++) {
+ for (i = 0; i < strlen(text); i++) {
         char char_ = text[i];
         
-        if (char_ >= 'A' && char_ <= 'Z') {
+   if (char_ >= 'A' && char_ <= 'Z') {
             result[i] = (char)(((int)char_ + s - 65) % 26 + 65);
         } else if (char_ >= 'a' && char_ <= 'z') {
             result[i] = (char)(((int)char_ + s - 97) % 26 + 97);
@@ -43,10 +43,10 @@ char* decrypt(char text[], int s) {
     static char result[100];
     int i;
     
-    for (i = 0; i < strlen(text); i++) {
+ for (i = 0; i < strlen(text); i++) {
         char char_ = text[i];
         
-        if (char_ >= 'A' && char_ <= 'Z') {
+   if (char_ >= 'A' && char_ <= 'Z') {
             result[i] = (char)(((int)char_ - s - 65 + 26) % 26 + 65);
         } else if (char_ >= 'a' && char_ <= 'z') {
             result[i] = (char)(((int)char_ - s - 97 + 26) % 26 + 97);
@@ -68,7 +68,7 @@ int main() {
     printf("Cipher: %s\n", encrypt(text, s));
     printf("Decrypted: %s\n", decrypt(encrypt(text, s), s));
     
-    return 0;
+   return 0;
 }
 
 ## OUTPUT:
